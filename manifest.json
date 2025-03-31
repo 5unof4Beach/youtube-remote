@@ -10,7 +10,9 @@
     "storage",
     "contextMenus",
     "scripting",
-    "declarativeNetRequestWithHostAccess"
+    "declarativeNetRequestWithHostAccess",
+    "tabs",
+    "windows"
   ],
   "host_permissions": [
     "<all_urls>"

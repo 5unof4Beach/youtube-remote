@@ -33,10 +33,5 @@
   },
   "action": {
     "default_popup": "/data/popup/index.html"
-  },
-  "homepage_url": "https://webextension.org/listing/useragent-switcher.html",
-  "options_ui": {
-    "page": "/data/options/index.html",
-    "open_in_tab": true
   }
 }

@@ -1,13 +1,65 @@
-input[type="button"] {
-  cursor: pointer;
+.youtube-tv-button {
+  background-color: #000000;  /* Material dark grey */
+  color: white;
+  padding: 8px 16px;
   border: none;
-  transition-delay: 0;
-  height: 32px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  text-transform: None;
+  letter-spacing: 0.5px;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
 }
-input[type="button"].active {
-  opacity: 0.5;
+
+.youtube-tv-button:hover {
+  background-color: #505050;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
 }
-input[type="button"]:disabled {
-  opacity: 0.2;
-  cursor: default;
+
+.youtube-tv-button:active {
+  background-color: #383838;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
+}
+
+.youtube-tv-button:disabled {
+  background-color: #757575;
+  color: rgba(255, 255, 255, 0.5);
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #333;
+}
+
+.header h1 {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.header-icon {
+  width: 48px;
+  height: 48px;
+  margin: 16px auto 8px;
+  display: block;
+  opacity: 0.9;
+}
+
+body {
+  margin: 0;
+  background-color: #ffffff;
+  min-width: 300px;
+}
+
+#agent {
+  padding: 20px;
 }

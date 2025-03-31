@@ -6,14 +6,7 @@ if (typeof importScripts !== 'undefined') {
 
 const network = new Network();
 
-chrome.storage.onChanged.addListener((ps, type) => {
-  if (
-    ps.mode || ps.ua || ps.blacklist || ps.whitelist || ps.custom || ps.sibilings || ps.protected || ps.userAgentData ||
-    type === 'session'
-  ) {
-    network.configure();
-  }
-});
+chrome.storage.onChanged.addListener(() => {network.configure();});
 chrome.runtime.onStartup.addListener(() => network.configure());
 chrome.runtime.onInstalled.addListener(() => network.configure());
 

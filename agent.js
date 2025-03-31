@@ -6,17 +6,14 @@ class Agent {
     this.#prefs = prefs;
   }
   parse(s = '') {
-    // log('ua.parse is called', s);
 
     if (this.#prefs.parser[s]) {
-      // log('ua.parse is resolved using parser');
+
       return Object.assign({
         userAgent: s
       }, this.#prefs.parser[s]);
     }
 
-    // build ua string from the navigator object or from a custom UAParser;
-    // examples: ${platform}, ${browser.version|ua-parser}
     s = s.replace(/\${([^}]+)}/g, (a, b) => {
       const key = (parent, keys) => {
         for (const key of keys) {

@@ -1,6 +1,3 @@
-/* global Agent */
-
-// eslint-disable-next-line no-unused-vars
 class Network {
   #PERTAB_INDEX = 3000;
   #MAX_PERTAB_RULES = 200;
@@ -41,13 +38,12 @@ class Network {
     }
     return r;
   }
-  
+
   async snet(prefs) {
-    // per-tab rules
     const addRules = [];
 
     let m = this.#PERTAB_INDEX;
-    for (const [key, {ua}] of Object.entries(prefs)) {
+    for (const [key, { ua }] of Object.entries(prefs)) {
       const o = this.agent.parse(ua);
       o.type = 'per-tab';
 
@@ -86,5 +82,5 @@ class Network {
 
     return addRules.length;
   }
-  
+
 }

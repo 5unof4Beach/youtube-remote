@@ -10,21 +10,22 @@
 <body>
   <div class="header">
     <h1>Remote YouTube</h1>
-    <img src="../icons/128.png" alt="TV Icon" class="header-icon">
   </div>
   <div id="agent" align="center">
-    <input type="button" class="youtube-tv-button" data-localized-value="openRemoteYoutube" value="Open"
-      title="Open youtube for TV" data-cmd="tab">
+    <button class="icon-button" title="Open youtube for TV" id="open-youtube-button">
+      <img src="../icons/128.png" alt="TV Icon" class="button-icon">
+    </button>
 
     <div class="help-section">
-      <span class="help-text">How to?</span>
+      <span class="help-text">How to ?</span>
       <div class="help-popup">
         <p>To connect to Remote YouTube:</p>
         <ol>
-          <li>Click the "Open" button above</li>
-          <li>Choose "Watch as guest" or "Add account"</li>
-          <li>Follow the on-screen instructions to complete pairing</li>
-          <li>For more detail, see <a href="https://support.google.com/youtube/answer/6180214?hl=en"
+          <li>Click onto the logo</li>
+          <li>Open youtube app on your phone</li>
+          <li>Select cast button (top right, next to notification icon)</li>
+          <li>Choose "Yotube on TV" (If you are on the same wifi with the pc) or "Link with TV code"</li>
+          <li>For more detail, see <a href="https://support.google.com/youtube/answer/7640706?sjid=728787703227847849-NC"
               target="_blank">YouTube TV Help</a></li>
         </ol>
         <p>
@@ -34,14 +35,15 @@
     </div>
   </div>
 
-
-  <script src="index.js"></script>
-
   <footer>
     <p id="footer-text">&copy; <span id="footer-year"></span> - Developed by
-      <a href="https://theducbui.com" target="_blank">THEDUCBUI</a>
+      <a href="https://theducbui.com" target="_blank">Theducbui</a>
+      <span class="footer-divider">|</span>
+      <a href="https://www.buymeacoffee.com/theducbui" target="_blank" class="bmc-link">
+        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="bmc-icon" />
+      </a>
     </p>
   </footer>
 </body>
-
+<script src="index.js" type="module"></script>
 </html>

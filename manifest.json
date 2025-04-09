@@ -7,13 +7,12 @@
   "description": "__MSG_extensionDescription__",
   "permissions": [
     "storage",
-    "scripting",
     "declarativeNetRequestWithHostAccess",
     "tabs",
     "windows"
   ],
   "host_permissions": [
-    "<all_urls>"
+    "*://www.youtube.com/tv/*"
   ],
   "icons": {
     "128": "/data/icons/active/128.png",

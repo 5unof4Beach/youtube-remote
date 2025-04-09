@@ -3,45 +3,45 @@ class Network {
   #RESOURCETYPE = Object.values(chrome.declarativeNetRequest.ResourceType);
 
   async configure() {
-    const sps = await new Promise(resolve => chrome.storage.session.get(null, resolve));
-    await this.snet(sps);
+    const sps = await new Promise((resolve) =>
+      chrome.storage.session.get(null, resolve)
+    );
+    await this.updateRules(sps);
   }
 
   action(userAgentString) {
-    const r = {
-      'type': 'modifyHeaders',
-      requestHeaders: [{
-        'header': 'user-agent',
-        'operation': 'set',
-        'value': userAgentString
-      }]
+    return {
+      type: "modifyHeaders",
+      requestHeaders: [
+        {
+          header: "user-agent",
+          operation: "set",
+          value: userAgentString,
+        },
+      ],
     };
-    return r;
   }
 
-  async snet(prefs) {
-    const addRules = [];
+  async updateRules(prefs) {
+    const addRules = Object.entries(prefs).map(
+      ([key, { ua: userAgent }], index) => ({
+        id: this.#PERTAB_INDEX + index,
+        priority: 3,
+        action: this.action(userAgent),
+        condition: {
+          tabIds: key.split(",").map(Number),
+          resourceTypes: this.#RESOURCETYPE,
+        },
+      })
+    );
 
-    let nextRuleId = this.#PERTAB_INDEX;
-    for (const [key, { ua: userAgent }] of Object.entries(prefs)) {
-      const tabIds = key.split(',').map(Number);
-      addRules.push({
-        'id': nextRuleId,
-        'priority': 3,
-        'action': this.action(userAgent),
-        'condition': {
-          tabIds,
-          'resourceTypes': this.#RESOURCETYPE
-        }
-      });
+    const removeRuleIds = (
+      await chrome.declarativeNetRequest.getSessionRules()
+    ).map((rule) => rule.id);
 
-      nextRuleId += 1;
-    }
-
-    const removeRuleIds = await chrome.declarativeNetRequest.getSessionRules().then(rulesArray => rulesArray.map(rule => rule.id));
     await chrome.declarativeNetRequest.updateSessionRules({
       addRules,
-      removeRuleIds
+      removeRuleIds,
     });
 
     return addRules.length;

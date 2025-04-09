@@ -1,7 +1,5 @@
-/* global Network */
-
 if (typeof importScripts !== 'undefined') {
-  self.importScripts('external/ua-parser.min.js', 'agent.js', 'network.js');
+  self.importScripts('network.js');
 }
 
 const network = new Network();

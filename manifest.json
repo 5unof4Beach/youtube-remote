@@ -7,7 +7,6 @@
   "description": "__MSG_extensionDescription__",
   "permissions": [
     "storage",
-    "contextMenus",
     "scripting",
     "declarativeNetRequestWithHostAccess",
     "tabs",
@@ -19,9 +18,6 @@
   "icons": {
     "128": "/data/icons/active/128.png",
     "256": "/data/icons/active/256.png"
-  },
-  "storage": {
-    "managed_schema": "schema.json"
   },
   "background": {
     "service_worker": "worker.js"

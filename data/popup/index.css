@@ -1,22 +1,27 @@
+body {
+  margin: 0;
+  padding: 0.6rem;
+  background-color: rgb(255, 255, 255);
+  min-width: 300px;
+}
+
 .youtube-tv-button {
-  background-color: #000000;  /* Material dark grey */
+  background-color: #000000;
+  /* Material dark grey */
   color: white;
   padding: 8px 16px;
   border: none;
   border-radius: 4px;
-  font-size: 13px;
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
-  text-transform: None;
   letter-spacing: 0.5px;
   font-family: Roboto, -apple-system, BlinkMacSystemFont, sans-serif;
+  width: fit-content;
 }
 
 .youtube-tv-button:hover {
-  background-color: #505050;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.16);
+  background-color: #451313;
 }
 
 .youtube-tv-button:active {
@@ -34,8 +39,13 @@
 .header {
   text-align: center;
   padding: 20px 0;
-  background-color: #1a1a1a;
-  border-bottom: 1px solid #333;
+  background-color: #ad8b8b;
+  border-radius: 5px 5px 0 0;
+}
+
+#agent {
+  background-color: #ad8b8b;
+  border-radius: 0 0 5px 5px;
 }
 
 .header h1 {
@@ -54,12 +64,84 @@
   opacity: 0.9;
 }
 
-body {
-  margin: 0;
-  background-color: #ffffff;
-  min-width: 300px;
+
+.help-section {
+  display: flex;
+  justify-content: end;
+  cursor: pointer;
+  padding: 10px 10px 10px 0;
+  position: relative;
 }
 
-#agent {
-  padding: 20px;
+.help-text {
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.help-popup {
+  display: none;
+  position: absolute;
+  bottom: 13px;
+  right: 13px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  width: 250px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5px;
+  transition: visibility 0s, opacity 0.2s;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.help-text:hover + .help-popup,
+.help-popup:hover {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+}
+
+.help-section::after {
+  content: '';
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  bottom: -10px;
+  left: 0;
+}
+
+.help-popup p {
+  margin: 0 0 8px 0;
+  font-weight: bold;
+}
+
+.help-popup ol {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.help-popup li {
+  margin: 5px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+  border-top: 1px solid #eee;
+  font-size: 12px;
+  color: #777;
+}
+
+footer p {
+  margin: 0;
+} 
+
+footer a {
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
 }

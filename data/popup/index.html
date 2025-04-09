@@ -12,19 +12,38 @@
     <h1>Remote YouTube</h1>
     <img src="../icons/128.png" alt="TV Icon" class="header-icon">
   </div>
-  <div id="toast"></div>
   <div id="agent" align="center">
-    <input type="button" 
-      class="youtube-tv-button"
-      data-localized-value="applyActiveTab" 
-      value="Open"
-      data-localized-title="applyActiveTabTitle" 
-      title="Open youtube for TV" 
-      data-cmd="tab">
+    <input type="button" class="youtube-tv-button" data-localized-value="openRemoteYoutube" value="Open"
+      title="Open youtube for TV" data-cmd="tab">
+
+    <div class="help-section">
+      <span class="help-text">How to?</span>
+      <div class="help-popup">
+        <p>To connect to Remote YouTube:</p>
+        <ol>
+          <li>Click the "Open" button above</li>
+          <li>Choose "Watch as guest" or "Add account"</li>
+          <li>Follow the on-screen instructions to complete pairing</li>
+          <li>For more detail, see <a href="https://support.google.com/youtube/answer/6180214?hl=en"
+              target="_blank">YouTube TV Help</a></li>
+        </ol>
+        <p>
+          Notice: For most of the time, you only need to pair your phone once.
+        </p>
+      </div>
+    </div>
   </div>
+
+
   <script src="/external/ua-parser.min.js"></script>
   <script src="/agent.js"></script>
   <script src="index.js"></script>
+
+  <footer>
+    <p id="footer-text">&copy; <span id="footer-year"></span> - Developed by
+      <a href="https://theducbui.com" target="_blank">THEDUCBUI</a>
+    </p>
+  </footer>
 </body>
 
 </html>

@@ -58,7 +58,7 @@ class Network {
         }
       }, {
         'id': m + 1,
-        'priority': 1, // to override the global set-cookie with priority 2
+        'priority': 1,
         'action': this.action(o, 'js'),
         'condition': {
           tabIds,

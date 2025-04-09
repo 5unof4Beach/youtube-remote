@@ -3,10 +3,10 @@
     "message": "Remote Youtube"
   },
   "extensionDescription": {
-    "message": "Connect and ontrol Youtube with your phone"
+    "message": "Connect and control Youtube with your phone"
   },
 
-  "applyActiveTab": {
+  "openRemoteYoutube": {
     "message": "Open Remote Youtube"
   }
 }

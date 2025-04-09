@@ -1,49 +1,71 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-  <link rel="stylesheet" href="index.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
+  <body>
+    <div class="header">
+      <h1>Remote YouTube</h1>
+    </div>
+    <div id="agent" align="center">
+      <button
+        class="icon-button"
+        title="Open youtube for TV"
+        id="open-youtube-button"
+      >
+        <img src="../icons/128.png" alt="TV Icon" class="button-icon" />
+        <div>Click</div>
+      </button>
 
-<body>
-  <div class="header">
-    <h1>Remote YouTube</h1>
-  </div>
-  <div id="agent" align="center">
-    <button class="icon-button" title="Open youtube for TV" id="open-youtube-button">
-      <img src="../icons/128.png" alt="TV Icon" class="button-icon">
-    </button>
-
-    <div class="help-section">
-      <span class="help-text">How to ?</span>
-      <div class="help-popup">
-        <p>To connect to Remote YouTube:</p>
-        <ol>
-          <li>Click onto the logo</li>
-          <li>Open youtube app on your phone</li>
-          <li>Select cast button (top right, next to notification icon)</li>
-          <li>Choose "Yotube on TV" (If you are on the same wifi with the pc) or "Link with TV code"</li>
-          <li>For more detail, see <a href="https://support.google.com/youtube/answer/7640706?sjid=728787703227847849-NC"
-              target="_blank">YouTube TV Help</a></li>
-        </ol>
-        <p>
-          Notice: For most of the time, you only need to pair your phone once.
-        </p>
+      <div class="help-section">
+        <span class="help-text">How to ?</span>
+        <div class="help-popup">
+          <p>To connect to Remote YouTube:</p>
+          <ol>
+            <li>Click onto the logo</li>
+            <li>Open youtube app on your phone</li>
+            <li>Select cast button (top right, next to notification icon)</li>
+            <li>
+              Choose "Yotube on TV" (If you are on the same wifi with the pc) or
+              "Link with TV code"
+            </li>
+            <li>
+              For more detail, see
+              <a
+                href="https://support.google.com/youtube/answer/7640706?sjid=728787703227847849-NC"
+                target="_blank"
+                >YouTube TV Help</a
+              >
+            </li>
+          </ol>
+          <p>
+            Notice: For most of the time, you only need to pair your phone once.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
 
-  <footer>
-    <p id="footer-text">&copy; <span id="footer-year"></span> - Developed by
-      <a href="https://theducbui.com" target="_blank">Theducbui</a>
-      <span class="footer-divider">|</span>
-      <a href="https://www.buymeacoffee.com/theducbui" target="_blank" class="bmc-link">
-        <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" class="bmc-icon" />
-      </a>
-    </p>
-  </footer>
-</body>
-<script src="index.js" type="module"></script>
+    <footer>
+      <p id="footer-text">
+        &copy; <span id="footer-year"></span> - Developed by
+        <a href="https://theducbui.com" target="_blank">Theducbui</a>
+        <span class="footer-divider">|</span>
+        <a
+          href="https://www.buymeacoffee.com/theducbui"
+          target="_blank"
+          class="bmc-link"
+        >
+          <img
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+            alt="Buy Me A Coffee"
+            class="bmc-icon"
+          />
+        </a>
+      </p>
+    </footer>
+  </body>
+  <script src="index.js" type="module"></script>
 </html>
